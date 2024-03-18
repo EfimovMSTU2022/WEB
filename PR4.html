@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			.container {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+			}
+			.form-input {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			input[type=submit] {
+				width: 100%;
+				height: 30px;
+				background-color: #AAFFCC;
+				border-radius: 15px;
+			}
+			input[type=submit]:hover {
+				cursor: pointer;
+				background-color: #0CFF00;
+			}
+			input[type=submit]:active {
+				background-color: #000;
+			}
+			.mode_button {
+				border-radius: 10px;
+				background-color: #FFFF99;
+				margin-top: 10px;
+			}
+			.mode_button:hover {
+				cursor: pointer;
+				background-color: #FF9933;
+			}
+			.mode_button:active {
+				background-color: #FF6600;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="container">
+		<h1>Registration form</h1>
+		<form>
+			<div class="form-input">
+				<label for "name-input">Enter your name:</label>
+				<input type="text" id="name-input" placeholder="Name"/>
+			</div>
+			<div class="form-input">
+				<label for="password-input">Enter your password:</label>
+				<input type="password" id="password-input" placeholder="Password"/>
+			</div>
+			<div class="form-input">
+				<label for="user-type-input">Select user type:</label>
+				<select id="user-type-input">
+					<option value="Admin">Admin</option>
+					<option value="Moderator">Moderator</option>
+					<option value="User">User</option>
+				</select>
+			</div>
+			<input type="submit" value="Submit form"/> 
+			
+		</form>
+		<button class="mode_button" id="mode">Mode</button>
+	</div>
+	<script type="text/javascript">
+			let currentColor = '';
+
+			document.getElementById('mode').addEventListener('click', function() {
+				let randomColor = Math.floor(Math.random()*16777215).toString(16);
+			
+				while (randomColor === currentColor) {
+					randomColor = Math.floor(Math.random()*16777215).toString(16);
+				}
+				
+				currentColor = randomColor;
+				document.body.style.backgroundColor = "#" + currentColor;
+			});
+		</script>
+	</body>
+
+</html>
