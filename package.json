@@ -1,0 +1,16 @@
+{
+  "name": "pr5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "PR5.js",
+  "scripts": {
+    "start:dev": "nodemon PR5.js",
+	"start:prod": "node PR5.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
